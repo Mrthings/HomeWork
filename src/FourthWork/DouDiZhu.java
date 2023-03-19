@@ -50,6 +50,43 @@ public class DouDiZhu {
         for (int i = 0; i < card.length; i++) {
             System.out.print(card[i] + " ");
         }
-        System.out.println("哈哈哈");
+
+        //发牌
+        int playNum = 3; //玩家数
+        int dipai = 3;  //底牌数
+        int num = (card.length - dipai) / playNum; //每个玩家应该分配的牌数
+        int left = (card.length - dipai) % playNum; //剩余的牌数，应该分配给底牌
+
+        String [][]player = new String[playNum][num]; //存放玩家的牌
+        String []dipaiArr = new String[dipai]; //存放底牌的牌
+
+        int count = 0; //记录当前已经分配了多少张牌
+        for (int i = 0; i < playNum; i++) { //分配给每个玩家
+            for (int j = 0; j < num; j++) {
+                player[i][j] = card[count];
+                count++;
+            }
+        }
+
+        for (int i = 0; i < dipai; i++) { //分配给底牌
+            dipaiArr[i] = card[count];
+            count++;
+        }
+
+        //输出每个玩家的牌
+        System.out.println("\n\n每个玩家的牌：");
+        for (int i = 0; i < playNum; i++) {
+            System.out.print("玩家" + (i+1) + "的牌：");
+            for (int j = 0; j < num; j++) {
+                System.out.print(player[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        //输出底牌
+        System.out.print("\n底牌：");
+        for (int i = 0; i < dipai; i++) {
+            System.out.print(dipaiArr[i] + " ");
+        }
     }
 }
