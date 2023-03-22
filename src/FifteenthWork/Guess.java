@@ -14,13 +14,13 @@ public class Guess {
         System.out.println("************************");
 
         Random rand = new Random();
-        int num = rand.nextInt(20);
+        int num = rand.nextInt(20) + 1;
 
         System.out.println();
         System.out.println("请输入数字(1-20): ");
+
         Scanner scan = new Scanner(System.in);
         int guessNum = scan.nextInt();
-
 
         if (num == guessNum) {
             System.out.println("猜对了");
