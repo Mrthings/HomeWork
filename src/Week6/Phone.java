@@ -1,6 +1,4 @@
-package Sixteenth;
-
-import java.util.Date;
+package Week6;
 
 /**
  * Author:AixCert

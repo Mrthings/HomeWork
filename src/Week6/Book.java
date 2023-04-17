@@ -1,4 +1,4 @@
-package Sixteenth;
+package Week6;
 
 /**
  * Author:AixCert

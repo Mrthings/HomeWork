@@ -1,4 +1,4 @@
-package SeventhWork;
+package Week7;
 
 import java.util.Scanner;
 
@@ -19,23 +19,18 @@ public class CalculatorStart {
         int num1 = scan.nextInt();
         System.out.print("请输入第二个数：");
         int num2 = scan.nextInt();
-
         //加法
         int resultAdd = cul.jiaFa(num1, num2);
         System.out.println(num1 + "+" + num2 + "和等于" + resultAdd);
-
         //减法
         int resultSub = cul.jianFa(num1, num2);
         System.out.println(num1 + "-" + num2 + "差等于" + resultSub);
-
         //乘法
         int resultMul = cul.chengFa(num1, num2);
         System.out.println(num1 + "*" + num2 + "积等于" + resultMul);
-
         //除法
         int resultDiv = cul.chuFa(num1, num2);
         System.out.println(num1 + "/" + num2 + "商等于" + resultDiv);
-
         //取余
         int resultRed = cul.quYu(num1, num2);
         System.out.println(num1 + "%" + num2 + "余等于" + resultRed);
