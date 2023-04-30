@@ -5,23 +5,27 @@ package Week10.HomeWork.User;
  * Date:2023/4/26 22:26
  */
 public class User {
-    //父类
-    private String userName;//用户名字
-    private String UserLabel;//用户标签
+    private String username;
+    private String userType;
 
-    public String getUserName() {
-        return userName;
+    public User(String username, String userType) {
+        this.username = username;
+        this.userType = userType;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public String getUsername() {
+        return username;
     }
 
-    public String getUserLabel() {
-        return UserLabel;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public void setUserLabel(String userLabel) {
-        UserLabel = userLabel;
+    public String getUserType() {
+        return userType;
+    }
+
+    public void setUserType(String userType) {
+        this.userType = userType;
     }
 }

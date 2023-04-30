@@ -5,6 +5,18 @@ package Week10.HomeWork.User;
  * Date:2023/4/26 22:24
  */
 public class AdminUser extends User {
-    //超级管理员
-    String password;
+    private String password;
+
+    public AdminUser(String username, String password) {
+        super(username, "管理员");
+        this.password = password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 }
