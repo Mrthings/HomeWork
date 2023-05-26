@@ -31,14 +31,8 @@ public class GuessSizeStart {
             }
 
             //比大小
-            if (guessnum == num) {
-                System.out.println("猜中了！");
-            } else if (guessnum > num) {
-                System.out.println("猜大了！");
-            } else {
-                System.out.println("猜小了！");
-            }
-            System.out.println("对方的数字为：" + num);
+            ThanSize thanSize = new ThanSize();
+            thanSize.thanSize(guessnum, num);
 
             //是否继续游戏
             System.out.print("是否继续游戏？(y/n)：");
