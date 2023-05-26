@@ -7,7 +7,7 @@ package ExtendProject;
  */
 public class ThanSize {
 
-    public void thanSize(int guessnum, int num) {
+    public int thanSize(int guessnum, int num) {
         //比大小
         if (guessnum == num) {
             System.out.println("猜中了！");
@@ -17,5 +17,6 @@ public class ThanSize {
             System.out.println("猜小了！");
         }
         System.out.println("对方的数字为：" + num);
+        return guessnum;
     }
 }
