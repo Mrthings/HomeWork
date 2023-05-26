@@ -3,6 +3,7 @@ package ExtendProject;
 import ExtendProject.Exception.GuessException;
 import ExtendProject.Exception.NumberCheck;
 
+import java.util.InputMismatchException;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -21,12 +22,15 @@ public class GuessSizeStart {
             int guessnum = 0;
             int num = random.nextInt(20) + 1;//生成一个随机数
             System.out.print("请输入你猜的数字(0-20)：");
-            //检测输入数字是否处于合法区间
+            //检测输入数字是否处于合法区间和是否为数字
             try {
                 guessnum = scan.nextInt();
                 NumberCheck.check(guessnum);
             } catch (GuessException e) {
                 System.out.println(e.getMessage());
+                System.exit(1);//退出程序
+            } catch (InputMismatchException e) {
+                System.out.println("输入的不是数字！请重新开始游戏！");
                 System.exit(1);//退出程序
             }
 
